@@ -1,0 +1,329 @@
+:root{
+    --light: #fbc0d4;
+    --dark: #e2366f;
+    --mid: rgba(226,54,111,0.2);
+}
+body {
+    display: grid;
+    font-family: Arial Black;
+    justify-content: center;
+    margin-top: 2%;
+    background-color: #e7e7e7;
+}
+h1 {
+    text-align: center;
+    font-size: 10vh;
+    color: white;
+    margin-top: -2vh;
+    text-shadow: 5px 5px var(--dark);
+}
+div {
+    z-index: 1;
+    margin-top: 2%;
+    background-color: var(--light);
+    padding: 5%;
+    border-radius: 90px;
+    width: 70vh;
+    border: 50px solid #e7e7e7;
+}
+p {
+    text-align: justify;
+    font-family: Segoe UI;
+    color: var(--dark);
+    margin-top: 5%;
+}
+nav {
+    display: flex;
+    margin-top: -10%;
+    font-size: 18pt;
+    text-align: center;
+    justify-content: space-between;
+    position: relative;
+    text-shadow: 3px 3px var(--dark);
+}
+nav a{
+    transition: transform .1s;
+}
+nav a:hover {
+    transform: translateY(-10%);
+}
+footer {
+    padding-top: 5%;
+    text-align: center;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+ul, ol {
+    text-align: justify;
+    font-family: Segoe UI;
+    color: var(--dark);
+}
+h3, table {
+    color: var(--dark);
+    text-decoration: underline;
+    font-size: 12pt;
+}
+.artgrid, .videogrid {
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+        "arthead arthead arthead"
+        "image1 image2 image3";
+}
+.arthead, .videohead {
+    grid-area: arthead;
+    font-size: 12pt;
+    font-family: Arial Black;
+    text-decoration: underline;
+    text-align: center;
+}
+.image1, .video1 {
+    grid-area: image1;
+    margin: 0.5%;
+    transition: transform .1s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid var(--dark);
+}
+.image2, .video2 {
+    grid-area: image2;
+    margin: 0.5%;
+    transition: transform .1s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid var(--dark);
+}
+.image3 {
+    grid-area: image3;
+    margin: 0.5%;
+    transition: transform .1s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid var(--dark);
+}
+
+.image1:hover, .image2:hover, .image3:hover {
+     transform: scale(1.7);
+     width: 200%
+     height: 100%
+     object-fit: contain;
+}
+table {
+    text-align: center;
+    margin: auto;
+    margin-top: 3%;
+}
+footer img {
+    padding: 0.5%;
+}
+form {
+    border-radius: 15px;
+    padding: 2%;
+    background-color: var(--mid);
+}
+label {
+    font-family: Segoe UI;
+    color: var(--dark);
+}
+input {
+    margin-bottom: -2%;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 25px;
+    display: block;
+}
+input[type=submit] {
+    height: 30px;
+    width: 100px;
+    background-color: var(--dark);
+    color: white;
+    font-family: Segoe UI;
+    margin: auto;
+    margin-top: 1%;
+    display: block;
+}
+textarea {
+    padding: 1%;
+    border: none;
+    width: 98%;
+    margin-top: 1%;
+    font-family: Arial;
+    border-radius: 5px;
+    color: gray;
+    resize: vertical;
+}
+#contact {
+    text-align: center;
+}
+a + p {
+    font-size: 8pt;
+    text-align: center;
+    margin-top: -0.5%;
+}
+p ~ ul {
+    border-radius: 15px;
+    padding: 2% 2% 2% 5%;
+    background-color: var(--mid);
+}
+#pinkButton {
+    position: fixed;
+    fill: #fbc0d4;
+    stroke: #e2366f;
+    stroke-width: 1%;
+    opacity: 1;
+    z-index: 2;
+}
+#blueButton {
+    position: fixed;
+    margin-top: 2%;
+    fill: #a7d8ff;
+    stroke: #134f80;
+    stroke-width: 1%;
+    opacity: 1;
+    z-index: 2;
+}
+#brownButton {
+    position: fixed;
+    margin-top: 4%;
+    fill: #eaa666;
+    stroke: #623103;
+    stroke-width: 1%;
+    opacity: 1;
+    z-index: 2;
+}
+#hero {
+    position: fixed;
+    z-index: 0;
+    margin-left: 33vw;
+    width: 30vw;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+#indexDiv {
+    margin-top: 155%;
+}
+@media screen and (max-width: 800px){
+    div {
+        padding: 4%;
+        width: 80vw;
+        margin-right: 6vw;
+        margin-left: 0%;
+        border-width: 5px;
+        border-radius: 35px;
+        overflow-x: hidden;
+    }
+    h1 {
+        font-size: 6vh;
+    }
+    .artgrid {
+        margin-left: -4%;
+    }
+    footer p {
+        font-size: 10pt;
+    }
+    footer img {
+        width: 10%;
+        height: 10%;
+    }
+    audio {
+        width: 200px;
+    }
+    #pinkButton{
+        margin-left: -3%;
+    }
+    #blueButton {
+        margin-top: 12%;
+        margin-left: -3%;
+    }
+    #brownButton {
+        margin-top: 24%;
+        margin-left: -3%;
+    }
+    #hero{
+        display: none;
+    }
+    #indexDiv {
+        margin-top: 4%;
+    }
+}
+@media screen and (min-width: 800px){
+    div {
+        width: 70vw;
+        margin-left: -5vw;
+    }
+    h1 {
+        font-size: 10vw;
+    }
+    nav {
+        margin-top: -5%;
+        font-size: 24pt;
+    }
+    body {
+        font-size: 16pt;
+    }
+    footer p {
+        font-size: 10pt;
+    }
+    footer img {
+        width: 4%;
+        height: 4%;
+    }
+    #pinkButton{
+    }
+    #blueButton {
+        margin-top: 5%;
+    }
+    #brownButton {
+        margin-top: 10%;
+    }
+    #hero {
+        width: 60vh;
+        margin-left: 7vw;
+    }
+    #indexDiv{
+        margin-top: 170%;
+    }
+}
+@media screen and (min-width: 1000px){
+    div {
+        width: 70vh;
+    }
+    h1{
+        font-size: 10vh;
+    }
+    nav {
+        margin-top: -10%;
+        font-size: 18pt;
+    }
+    body {
+        font-size: 12pt;
+    }
+    #blueButton {
+        margin-top: 2%;
+    }
+    #brownButton {
+        margin-top: 4%;
+    }
+    #hero {
+        width: 45vw;
+        margin-left: 27%;
+    }
+}
+@media screen and (min-width: 1400px){
+    #hero{
+        margin-left: 33vw;
+        width: 30vw;
+    }
+}
